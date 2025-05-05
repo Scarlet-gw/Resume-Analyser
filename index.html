@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Analyser</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fbfc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+    }
+    p {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-login {
+      background-color: #000;
+      color: white;
+    }
+    .btn-login:hover {
+      background-color: #333;
+    }
+    .btn-signup {
+      background-color: white;
+      color: black;
+      border: 1px solid #d1d5db;
+    }
+    .btn-signup:hover {
+      background-color: #f3f4f6;
+    }
+    .footer {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Analyser</h1>
+    <p>Connect businesses with the right talent</p>
+    <p>Choose an option to continue</p>
+    <div class="btn-container">
+      <button class="btn btn-login" onclick="location.href='login.html'">Log In</button>
+      <button class="btn btn-signup" onclick="location.href='signup.html'">Sign Up</button>
+    </div>
+    <p class="footer">Find the perfect match for your organization</p>
+  </div>
+</body>
+</html>
