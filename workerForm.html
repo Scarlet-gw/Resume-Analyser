@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Worker Registration</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fbfc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+    }
+    .form-group {
+      margin: 1rem 0;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #d1d5db;
+    }
+    .btn {
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-primary {
+      background-color: #000;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #333;
+    }
+    .linkedin-btn {
+      background-color: #0077b5;
+      color: white;
+      margin-top: 1rem;
+    }
+    .linkedin-btn:hover {
+      background-color: #005582;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Worker Registration</h1>
+    <form id="workerForm">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="fullName" />
+      </div>
+      <div class="form-group">
+        <label>Specialization</label>
+        <input type="text" id="specialization" />
+      </div>
+      <div class="form-group">
+        <label>Experience (years)</label>
+        <input type="number" id="experience" />
+      </div>
+      <div class="form-group">
+        <label>Schooling</label>
+        <input type="text" id="schooling" />
+      </div>
+      <div class="form-group">
+        <label>Upload Resume</label>
+        <input type="file" id="resumeFile" />
+      </div>
+      <div class="form-group">
+        <label>Upload Graduation Proof</label>
+        <input type="file" id="graduationFile" />
+      </div>
+      <button class="btn linkedin-btn" type="button" onclick="connectLinkedIn()">Connect with LinkedIn</button>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function connectLinkedIn() {
+      alert("Redirecting to LinkedIn for connection (demo only)");
+      // Real integration would use LinkedIn OAuth2.
+    }
+
+    document.getElementById('workerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const fullName = document.getElementById('fullName').value.trim();
+      const specialization = document.getElementById('specialization').value.trim();
+      const experience = document.getElementById('experience').value.trim();
+      const schooling = document.getElementById('schooling').value.trim();
+      const resumeFile = document.getElementById('resumeFile').files[0];
+      const graduationFile = document.getElementById('graduationFile').files[0];
+
+      if (!fullName || !specialization || !experience || !schooling || !resumeFile || !graduationFile) {
+        alert("Please complete all fields and upload the required documents.");
+        return;
+      }
+
+      alert("Worker details submitted successfully!");
+    });
+  </script>
+</body>
+</html>
